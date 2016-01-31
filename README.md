@@ -3,7 +3,9 @@
 Persistence uses mongodb, so there should be a mongod running.
 
 $ npm install
+
 $ ./node_modules/.bin/webpack
+
 $ npm start
 
 Then check out http://localhost:3000
