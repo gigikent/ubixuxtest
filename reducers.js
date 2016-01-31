@@ -3,9 +3,8 @@ import { combineReducers } from 'redux';
 const appMessage = (state = {text: ''}, action) => {
     switch (action.type) {
     case 'MESSAGE': return {text: action.text};
-    case 'ADD_USER': return {text: 'added user ' + action.name};
-    case 'DELETE_USER': return {text: 'deleted user'};
-    case 'DELETE_TODO': return {text: 'deleted todo ' + action.text};
+    case 'ADD_USER': return {text: 'Added user ' + action.name};
+    case 'DELETE_USER': return {text: 'Deleted user'};
     case 'LOGOUT': return {text: ''};
     default: return state;
     }

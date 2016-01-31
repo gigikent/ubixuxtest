@@ -94,7 +94,8 @@ class TodoListContainer extends Component {
 			dispatch({type: 'SHOW_TARGETS', todoId});
 			dispatch({type: 'SELECT_TODO', todoId});		    
 		    },
-		    removeTodo: () => dispatch(deleteTodo(todoId))
+		    removeTodo: () => dispatch(message('You deleted todo ' +
+						       todos.byId[todoId].text))
 		}
 	    ))
 	);
@@ -251,6 +252,7 @@ class UserPage extends Component {
 		: createElement('div', {})
 	    ),
 	    createElement('div', {style: {flexGrow: 1}}),
+	    createElement('h2', {}, 'Notifications'),
 	    createElement(NotificationListContainer, {})
 	);
     }
@@ -277,6 +279,7 @@ class App extends Component {
 	    this.props.loggedUserId
 		? createElement(UserPage, {userId: this.props.loggedUserId})
 	    : createElement(LoginPage, {}),
+	    createElement('h2', {}, 'App message'),
 	    createElement('div', {}, appMessage.text)
 	);
     }
