@@ -1,3 +1,15 @@
+# Instructions
+
+Persistence uses mongodb, so there should be a mongod running.
+
+$ npm install
+$ ./node_modules/.bin/webpack
+$ npm start
+
+Then check out http://localhost:3000
+
+The client side is uses React for the view and Redux for managing state.
+
 # Ubix UX Test
 
 Ubix is looking for great UX engineers.  Here's the outline of a take-home project to show us what you've got.
